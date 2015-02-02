@@ -1,0 +1,36 @@
+body {
+	background-image:url(http://i.imgur.com/ib0TAfS.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#button_container {
+	width: 800px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+#grid_container {
+	width: 800px;
+	margin: auto;
+	overflow: auto;
+	border: 7px solid #009933;
+	visibility: hidden;
+}
+
+.squareDiv {
+	float: left;
+	background-color: transparent;
+}
+
+.newRow {
+	clear: both;
+}
+
+button {
+	width: 150px;
+	height: 80px;
+	font-family: Arial;
+	font-size: 18px;
+	margin: 10px;
+}

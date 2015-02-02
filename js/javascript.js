@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //Change color on mouseover
     $(document).on('mouseover', '.squareDiv', function() {
-    	$(this).css("background-color", "#6666FF");
+    	$(this).css("background-color", "#3D3D99");
 	});
 });
 

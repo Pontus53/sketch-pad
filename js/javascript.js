@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //Change color on mouseover
     $(document).on('mouseover', '.squareDiv', function() {
-    	$(this).css("background-color", "#3D3D99");
+    	$(this).css("background-color", getRandomColor());
 	});
 });
 
@@ -37,3 +37,8 @@ function newGrid() {
 	createGrid();
 	$('#grid_container').css("visibility", "visible");
 }
+
+//Get random color
+function getRandomColor() {
+			return '#'+Math.floor(Math.random()*16777215).toString(16);
+		}

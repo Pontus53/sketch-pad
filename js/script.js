@@ -40,5 +40,15 @@ function newGrid() {
 
 //Get random color
 function getRandomColor() {
-			return '#'+Math.floor(Math.random()*16777215).toString(16);
+			var random_color_int = Math.floor(Math.random()*16777215);
+			var random_color_hex = '#'+random_color_int.toString(16);
+			//console.log("Hex = " + random_color_hex + " Int = " + random_color_int);
+
+			while (random_color_int > 16777215 || random_color_int < 1118481) {
+				console.log(random_color_hex + " INVALID HEX! Generating new...");
+				random_color_int = Math.floor(Math.random()*16777215);
+				random_color_hex = '#'+random_color_int.toString(16);
+			}
+
+			return random_color_hex;
 		}

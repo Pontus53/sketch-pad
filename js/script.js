@@ -3,6 +3,22 @@ $(document).ready(function () {
     $(document).on('mouseover', '.squareDiv', function() {
     	$(this).css("background-color", getRandomColor());
 	});
+
+    $("#pickStyle").change(function() {
+    	var stylePick = $("#pickStyle option:selected").val();
+		console.log("Background: " + stylePick);
+		$("body").css("background-image", stylePick);
+
+		//if (stylePick==1) {
+		//	$("body").css("background-image", "url(http://i.imgur.com/ib0TAfS.jpg)");
+		//};
+		//if (stylePick==2) {
+		//	$("body").css("background-image", "url(http://i.imgur.com/UG3mC2q.png)");
+		//};
+		//if (stylePick==3) {
+		//	$("body").css("background-image", "url(http://i.imgur.com/Pa4JQze.jpg)");
+		//};
+    });
 });
 
 //Creates grid

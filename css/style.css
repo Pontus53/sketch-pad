@@ -14,7 +14,7 @@ body {
 	width: 800px;
 	margin: auto;
 	overflow: auto;
-	border: 7px solid #009933;
+	border: 7px solid #736698;
 	visibility: hidden;
 }
 
@@ -25,6 +25,52 @@ body {
 
 .newRow {
 	clear: both;
+}
+
+#stylePick {
+	width: 180px;
+	height: 26px;
+	background-color: #292F51;
+	position: fixed;
+	z-index: 999999999;
+	bottom: 0;
+	right: 0;
+	border-radius: 10px 0px 0px 0px;
+	font-size: 14px;
+	color: #F7F3FB;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+table {
+	display: table;
+	border-collapse: separate;
+	border-spacing: 4px;
+	border-color: gray;
+}
+
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+tr {
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+
+td {
+	display: table-cell;
+	vertical-align: inherit;
+}
+
+#pickStyle {
+	width: 100%;
+	font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+	font-size: 13px;
+	letter-spacing: 1px;
 }
 
 /*Generated css-code below*/

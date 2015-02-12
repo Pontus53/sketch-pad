@@ -48,7 +48,7 @@ function getRandomColor() {
 	//console.log("Hex = " + random_color_hex + " Int = " + random_color_int);
 
 	while (random_color_int > 16777215 || random_color_int < 1118481) {
-		console.log(random_color_hex + " INVALID HEX! Generating new...");
+		console.log(random_color_hex + " = INVALID HEX! Generating new...");
 		random_color_int = Math.floor(Math.random()*16777215);
 		random_color_hex = '#'+random_color_int.toString(16);
 	}
@@ -71,6 +71,6 @@ function backgroundChanger() {
     $("#pick_style").change(function() {
     	docCookies.setItem("background", $("#pick_style option:selected").val(), 2592000);
 		$("body").css("background-image", docCookies.getItem("background"));
-		console.log("Background: " + docCookies.getItem("background"));
+		console.log("Selected background: " + docCookies.getItem("background").slice(4, -1));
     });
 }

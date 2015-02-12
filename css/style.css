@@ -17,6 +17,10 @@ body {
 	visibility: hidden;
 }
 
+#grid_container:hover {
+	cursor: crosshair;
+}
+
 .squareDiv {
 	float: left;
 	background-color: transparent;
@@ -114,6 +118,7 @@ td {
 	background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
 	background-color:#c62d1f;
+	cursor: pointer;
 }.btn:active {
 	position:relative;
 	top:1px;

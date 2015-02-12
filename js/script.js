@@ -4,15 +4,8 @@ $(document).ready(function () {
     	$(this).css("background-color", getRandomColor());
 	});
 
-    //background changer
-    var style_pick = $("#pick_style option:selected").val();
-    $("body").css("background-image", style_pick);
-    
-    $("#pick_style").change(function() {
-    	style_pick = $("#pick_style option:selected").val();
-		console.log("Background: " + style_pick);
-		$("body").css("background-image", style_pick);
-    });
+    //run backgroundChanger function
+    backgroundChanger();
 });
 
 //Creates grid
@@ -50,15 +43,34 @@ function newGrid() {
 
 //Get random color
 function getRandomColor() {
-			var random_color_int = Math.floor(Math.random()*16777215);
-			var random_color_hex = '#'+random_color_int.toString(16);
-			//console.log("Hex = " + random_color_hex + " Int = " + random_color_int);
+	var random_color_int = Math.floor(Math.random()*16777215);
+	var random_color_hex = '#'+random_color_int.toString(16);
+	//console.log("Hex = " + random_color_hex + " Int = " + random_color_int);
 
-			while (random_color_int > 16777215 || random_color_int < 1118481) {
-				console.log(random_color_hex + " INVALID HEX! Generating new...");
-				random_color_int = Math.floor(Math.random()*16777215);
-				random_color_hex = '#'+random_color_int.toString(16);
-			}
+	while (random_color_int > 16777215 || random_color_int < 1118481) {
+		console.log(random_color_hex + " INVALID HEX! Generating new...");
+		random_color_int = Math.floor(Math.random()*16777215);
+		random_color_hex = '#'+random_color_int.toString(16);
+	}
 
-			return random_color_hex;
-		}
+	return random_color_hex;
+}
+
+//background selector
+function backgroundChanger() {
+	//check if cookie exists, otherwise uses default background
+	if (docCookies.hasItem("background")) {
+    	$("body").css("background-image", docCookies.getItem("background"));
+    }
+
+    else {
+    	$("body").css("background-image", $("#default_background").val());
+	}
+
+	//creates/overwrites background cookie when #pick_style is changed
+    $("#pick_style").change(function() {
+    	docCookies.setItem("background", $("#pick_style option:selected").val(), 2592000);
+		$("body").css("background-image", docCookies.getItem("background"));
+		console.log("Background: " + docCookies.getItem("background"));
+    });
+}

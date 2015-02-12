@@ -21,7 +21,7 @@ function createGrid() {
 
 	//Create Grid
 	for (var i = 1; i <= input; i++) {
-    	for (var x = 0; x < input; x++) {
+    	for (var x = 1; x <= input; x++) {
     		$("#grid_container").append('<div class="squareDiv"></div>');
     	};
     	$("#grid_container").append('<div class="newRow"></div>');

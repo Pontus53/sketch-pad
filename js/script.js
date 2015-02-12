@@ -4,18 +4,18 @@ $(document).ready(function () {
     	$(this).css("background-color", getRandomColor());
 	});
 
-    $("#pickStyle").change(function() {
-    	var stylePick = $("#pickStyle option:selected").val();
-		console.log("Background: " + stylePick);
-		$("body").css("background-image", stylePick);
+    $("#pick_style").change(function() {
+    	var style_pick = $("#pick_style option:selected").val();
+		console.log("Background: " + style_pick);
+		$("body").css("background-image", style_pick);
 
-		//if (stylePick==1) {
+		//if (style_pick==1) {
 		//	$("body").css("background-image", "url(http://i.imgur.com/ib0TAfS.jpg)");
 		//};
-		//if (stylePick==2) {
+		//if (style_pick==2) {
 		//	$("body").css("background-image", "url(http://i.imgur.com/UG3mC2q.png)");
 		//};
-		//if (stylePick==3) {
+		//if (style_pick==3) {
 		//	$("body").css("background-image", "url(http://i.imgur.com/Pa4JQze.jpg)");
 		//};
     });

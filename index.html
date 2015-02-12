@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Pontus B</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+
+	<body>
+		<div style="float:right">
+			<div id="style_pick">
+				<table border="0" width="100%">
+					<tbody>
+						<tr>
+							<td width="20%">
+								<div align="center">Style:</div>
+							</td>
+							<td width="80%">
+								<select id="pick_style">
+									<option value="url(http://i.imgur.com/ib0TAfS.jpg)">Samurai</option>
+									<option value="url(http://i.imgur.com/UG3mC2q.png)">Anime Girl</option>
+									<option value="url(http://i.imgur.com/Pa4JQze.jpg)">One Piece</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div id="button_container">
+			<a class="btn" href="#" onclick="clearGrid()">Clear the grid!</a>
+			<a class="btn" href="#" onclick="newGrid()">New grid!</a>
+		</div>
+
+		<div id="grid_container"></div>
+	</body>
+</html>

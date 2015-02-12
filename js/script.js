@@ -5,8 +5,11 @@ $(document).ready(function () {
 	});
 
     //background changer
+    var style_pick = $("#pick_style option:selected").val();
+    $("body").css("background-image", style_pick);
+    
     $("#pick_style").change(function() {
-    	var style_pick = $("#pick_style option:selected").val();
+    	style_pick = $("#pick_style option:selected").val();
 		console.log("Background: " + style_pick);
 		$("body").css("background-image", style_pick);
     });

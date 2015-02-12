@@ -4,20 +4,11 @@ $(document).ready(function () {
     	$(this).css("background-color", getRandomColor());
 	});
 
+    //background changer
     $("#pick_style").change(function() {
     	var style_pick = $("#pick_style option:selected").val();
 		console.log("Background: " + style_pick);
 		$("body").css("background-image", style_pick);
-
-		//if (style_pick==1) {
-		//	$("body").css("background-image", "url(http://i.imgur.com/ib0TAfS.jpg)");
-		//};
-		//if (style_pick==2) {
-		//	$("body").css("background-image", "url(http://i.imgur.com/UG3mC2q.png)");
-		//};
-		//if (style_pick==3) {
-		//	$("body").css("background-image", "url(http://i.imgur.com/Pa4JQze.jpg)");
-		//};
     });
 });
 

@@ -1,10 +1,15 @@
 $(document).ready(function () {
+    //set #grid_container's width to 70% of the browswers height
+    var window_height = window.innerHeight*0.7;
+    console.log("Height: " + window_height);
+    $("#grid_container").css("width", Math.round(window_height));
+
     //Change color on mouseover
     $(document).on('mouseover', '.squareDiv', function() {
     	$(this).css("background-color", getRandomColor());
 	});
 
-    //run backgroundChanger function
+    //set background
     backgroundChanger();
 });
 
@@ -24,8 +29,8 @@ function createGrid() {
     };
 
     //Set size of each block
-    $('.squareDiv').css('width',blockSize);
-	$('.squareDiv').css('height',blockSize);
+    $('.squareDiv').css('width', blockSize);
+	$('.squareDiv').css('height', blockSize);
 }
 
 //Clear the grid

@@ -10,7 +10,6 @@ body {
 }
 
 #grid_container {
-	width: 800px;
 	margin: auto;
 	overflow: auto;
 	border: 7px solid #736698;
@@ -31,7 +30,7 @@ body {
 }
 
 #style_pick {
-	width: 180px;
+	width: 231px;
 	height: 26px;
 	background-color: #292F51;
 	position: fixed;

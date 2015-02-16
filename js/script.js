@@ -105,28 +105,41 @@ function navMenu() {
 	//hover
 	$("li").css("opacity", "0.5");
 	$("li:nth-child(1)").hover(function() {
-		$(this).fadeTo("slow", 1);
+		$(this).fadeTo("400", 1);
 	}, function() {
-		$(this).fadeTo("slow", 0.5);
+		$(this).fadeTo("400", 0.5);
 	});
 	$("li:nth-child(2)").hover(function() {
-		$(this).fadeTo("slow", 1);
+		$(this).fadeTo("400", 1);
 	}, function() {
-		$(this).fadeTo("slow", 0.5);
+		$(this).fadeTo("400", 0.5);
 	});
 	$("li:nth-child(3)").hover(function() {
-		$(this).fadeTo("slow", 1);
+		$(this).fadeTo("400", 1);
 	}, function() {
-		$(this).fadeTo("slow", 0.5);
+		$(this).fadeTo("400", 0.5);
 	});
 
 	//click
 	$("li:nth-child(1)").click(function() {
 		//do something
 	});
+
 	$("li:nth-child(2)").click(function() {
-		//do something
+		$("#photo_container").css("display", "block");
+		$("#photo_container").css("background-image", "url(http://i.imgur.com/kJGvWEP.jpg)");
+		
+		$("#close_button").hover(function() {
+			$(this).fadeTo("400", 1);
+		}, function() {
+			$(this).fadeTo("400", 0.5);
+		});
+
+		$("#close_button").click(function() {
+			$("#photo_container").css("display", "none");
+		});
 	});
+
 	$("li:nth-child(3)").click(function() {
 		//do something
 	});
@@ -136,7 +149,7 @@ function animeSchedule() {
 	//add stuff
 }
 
-function animeUpcoming() {
+function niceRobin() {
 	//add stuff
 }
 

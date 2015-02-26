@@ -126,18 +126,7 @@ function navMenu() {
 	});
 
 	$("li:nth-child(2)").click(function() {
-		$("#photo_container").css("display", "block");
-		$("#photo_container").css("background-image", "url(http://i.imgur.com/kJGvWEP.jpg)");
-		
-		$("#close_button").hover(function() {
-			$(this).fadeTo("400", 1);
-		}, function() {
-			$(this).fadeTo("400", 0.5);
-		});
-
-		$("#close_button").click(function() {
-			$("#photo_container").css("display", "none");
-		});
+		//do something
 	});
 
 	$("li:nth-child(3)").click(function() {
